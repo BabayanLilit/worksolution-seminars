@@ -1,0 +1,10 @@
+*.log
+*.tgz.*
+*.tar.*
+*.gz
+*.zip
+.DS_Store
+Thumbs.db
+*.sql
+*.csv
+.idea/
