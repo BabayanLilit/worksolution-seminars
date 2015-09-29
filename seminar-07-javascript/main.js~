@@ -1,0 +1,58 @@
+var Class = function (constructor, methods) {
+    var Class = constructor || function () {};
+
+    for (var method in methods) {
+        if (!methods.hasOwnProperty(method)) {
+            continue;
+        }
+
+        Class.prototype[method] = methods[method];
+    }
+
+    return Class;
+};
+
+var Cross = Class(function () {
+    this.$container = $('<img src="cross.png"/>');
+
+    $('body').append(this.$container);
+}, {
+    moveLeft: function () {
+
+    },
+    moveRight: function () {
+
+    },
+    moveUp: function () {
+
+    },
+    moveDown: function () {
+
+    }
+});
+
+const CODE_RIGHT_ARROW = 39;
+const CODE_LEFT_ARROW = 37;
+const CODE_UP_ARROW = 38;
+const CODE_DOWN_ARROW = 40;
+
+var cross = new Cross();
+var $body = $('body');
+
+$body.on('keyup', function (e) {
+    if (e.keyCode == CODE_RIGHT_ARROW) {
+        cross.moveRight();
+    }
+
+    if (e.keyCode == CODE_LEFT_ARROW) {
+        cross.moveLeft();
+    }
+
+    if (e.keyCode == CODE_UP_ARROW) {
+        cross.moveUp();
+    }
+
+    if (e.keyCode == CODE_DOWN_ARROW) {
+        cross.moveDown();
+    }
+});

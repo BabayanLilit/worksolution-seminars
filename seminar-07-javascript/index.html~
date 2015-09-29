@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            position: relative;
+        }
+
+        img {
+            position: absolute;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <script src="jquery.js"></script>
+    <script src="class.js"></script>
+    <script src="cross.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
